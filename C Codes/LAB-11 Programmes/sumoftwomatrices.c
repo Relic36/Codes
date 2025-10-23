@@ -22,6 +22,7 @@ int main(){
             scanf("%d", &arr2[i][j]);
         }
     }
+    printf("Sum of the two matrices is:\n");
     for (i = 0; i < row1; i++){
         for (j = 0; j < col1; j++){
             printf("%d", arr1[i][j] + arr2[i][j]);
