@@ -10,15 +10,15 @@ int main(){
     printf("Enter columns of second matrix: ");
     scanf("%d", &col2);
     int arr1[row1][col1], arr2[row2][col2];
+    printf("Enter elements of first matrix:\n");
     for (i = 0; i < row1; i++){
         for (j = 0; j < col1; j++){
-            printf("Enter element [%d][%d] of first matrix: ", i, j);
             scanf("%d", &arr1[i][j]);
         }
     }
+    printf("Enter elements of second matrix:\n");
     for (i = 0; i < row2; i++){
         for (j = 0; j < col2; j++){
-            printf("Enter element [%d][%d] of second matrix: ", i, j);
             scanf("%d", &arr2[i][j]);
         }
     }
