@@ -21,8 +21,10 @@ int main(){
         printf("The strings are equal.\n");
     } else if (result < 0){
         printf("The first string is less than the second string.\n");
+        printf("Difference: %d\n", result);
     } else {
         printf("The first string is greater than the second string.\n");
+        printf("Difference: %d\n", result);
     }
     return 0;
 }
