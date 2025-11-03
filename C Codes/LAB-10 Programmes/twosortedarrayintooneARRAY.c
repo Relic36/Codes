@@ -23,6 +23,18 @@ int main(){
     for (i = 0; i < numb; i++) {
         merged[num + i] = array2[i];
     }
+    for(i = 0; i < num + numb -1; i++) {
+        for(int j = 0; j < num + numb-i-1; j++) {
+            int temp;
+            if(merged[j] > merged[j+1]) {
+                // Swap if they are in wrong order
+                temp = merged[j];
+                merged[j] = merged[j+1];
+                merged[j+1] = temp;
+            }
+        }
+    }
+    
     printf("Merged array: ");
     for (i = 0; i < num + numb; i++) {
         printf("%d ", merged[i]);
