@@ -11,6 +11,7 @@ int main() {
     } else {
         printf("Error reading input.\n");
     }
+    name[strcspn(name, "\n")] = 0; // Remove newline character if present
 
     return 0;
 }

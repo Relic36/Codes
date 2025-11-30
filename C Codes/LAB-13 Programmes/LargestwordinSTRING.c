@@ -5,6 +5,8 @@ int main(){
     int i, maxLen = 0, currLen = 0, startIndex = 0, maxStartIndex = 0;
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
+
+    // removing newline character if present
     int len = strlen(str);
     if (len > 0 && str[len-1] == '\n') {
         str[len-1] = '\0';
