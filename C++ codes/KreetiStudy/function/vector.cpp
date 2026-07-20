@@ -1,0 +1,10 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+vector<int>nums = {1,2,3,4,5};
+nums.front() = 10;
+cout << nums.front() << endl;
+return 0;
+}

@@ -3,6 +3,7 @@
 #include <cctype>
 using namespace std;
 
+
 int main(){
     string str;
     cout << "Enter a string: ";
