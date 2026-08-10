@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct employee {
     char name[50];
     char gender[10];
@@ -16,12 +17,7 @@ int main(){
     printf("Enter the number of employees: ");
     scanf("%d", &n);
 
-    if (n <= 0 || n > 100) {
-        printf("Invalid number of employees.\n");
-        return 1;
-    }
-
-    struct employee employees[100];
+    struct employee *employees = (struct employee *)malloc(n * sizeof(struct employee));
 
     for(int i = 0; i < n; i++) {
         struct employee e;
@@ -45,5 +41,6 @@ int main(){
         printf("Name: %s\n", e.name);
         printf("Gross Pay: %.2f\n", GP(e.pay));
     }
+    free(employees);
     return 0;
 }
