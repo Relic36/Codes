@@ -23,7 +23,7 @@ void createnode(void){
         }
 }
 
-int main(void){
+int main(){
     int n, i;
     printf("Enter the number of nodes: ");
     scanf("%d", &n);
@@ -35,7 +35,7 @@ int main(void){
       while(temp != NULL){
          printf("%d ", temp->data);
          temp = temp->next;
-     }
+        }
      printf("NULL\n");
      return 0;
    }
