@@ -51,3 +51,15 @@
     }
     printf("\n");
   }
+  int main(){
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    enqueue(40);
+    printf("Displaying queue:\n");
+    display();
+    printf("Dequeued: %d\n", dequeue());
+    printf("Displaying queue after dequeue:\n");
+    display();
+    return 0;
+  }
