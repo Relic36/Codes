@@ -45,7 +45,7 @@ char popOp() {
 
 int precedence(char op) {
     if (op == '+' || op == '-') return 1;
-    if (op == '*' || op == '/') return 2;
+    if (op == '*' || op == '/' || op == '%') return 2;
     if (op == '^') return 3;
     return 0;
 }
@@ -65,6 +65,12 @@ int applyOperator(int a, int b, char op) {
         default:
             printf("Invalid operator\n");
             exit(1);
+        case '%':
+            if (b == 0) {
+                printf("Division by zero\n");
+                exit(1);
+            }
+            return a % b;
     }
 }
 
@@ -109,7 +115,7 @@ int main() {
 
             popOp();
         }
-        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') {
+        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^' || ch == '%') {
             while (topOp >= 0 && opStack[topOp] != '(' && precedence(opStack[topOp]) >= precedence(ch)) {
                 reduce();
             }
